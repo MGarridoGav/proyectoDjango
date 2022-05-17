@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/gestionCursos.css' %}">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Universidad</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/cursos">Gestión</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contacto">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+            <img src="{% static 'img/puerta.jpg' %}" class="d-block w-100" alt="entrada">
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+            <img src="{% static 'img/biblio.jpg' %}" class="d-block w-100" alt="biblioteca">
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+            <img src="{% static 'img/patio.jpg' %}" class="d-block w-100" alt="patio">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 style="margin-top: 4%;">Universidad Carmen Laffón</h1>
+        <p style="margin-top: 1%; font-size: larger;">Gracias a su trayectoria, a su estructura y al
+            equipo humano que le da alma, la Universidad de Sevilla es hoy una referencia en el
+            sistema universitario español y europeo. Los más de 70.000 alumnos matriculados el último curso
+            así lo corroboran, convirtiéndola en la segunda universidad española y la primera andaluza en número
+            de matriculaciones en su centenar de grados y más de 160 másteres.
+        </p>
+        <p style="font-size: larger; margin-bottom: 40px;"> Su compromiso con el conocimiento y la
+            contribución al progreso la hacen destacar también en la generación de patentes, área en el que ostenta el segundo puesto a nivel nacional.
+        </p>
+        <td><a href="cursos/" class="btn btn-info" style="margin-bottom: 100px;">Gestión</a></td>
+        <td><a href="contacto/" class="btn btn-secondary" style="margin-bottom: 100px; margin-left: 10px;">Contacto</a></td>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

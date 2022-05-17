@@ -1,0 +1,32 @@
+{% extends "./plantilla.html" %}
+
+{% block title %} Gestión de Cursos {% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <h2>Edición de Curso</h2>
+        <div class="card">
+            <div class="card-body">
+                <form action="/editarCurso/" class="action" method="POST">{% csrf_token %}
+                    <div class="form-group py-2">
+                        <input type="text" id="txtCodigo" name="txtCodigo" class="form-control"
+                        placeholder="Codigo" minlength="6" maxlength="6" value="{{curso.codigo}}" readonly required>
+                    </div>
+                    <div class="form-group py-2">
+                        <input type="text" id="txtNombre" name="txtNombre" class="form-control"
+                        placeholder="Nombre" maxlength="50" value="{{curso.nombre}}" required>
+                    </div>
+                    <div class="form-group py-2">
+                        <input type="text" id="numPrecio" name="numPrecio" class="form-control"
+                        min="0" max="50000" value="{{curso.precio}}" required>
+                    </div>
+                    <div class="form-group py-3">
+                        <button type="submit" class="btn btn-success btn-block text-white">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
